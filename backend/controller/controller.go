@@ -78,7 +78,7 @@ func RegisterController(ctx *gin.Context) {
 			}
 			statusRegister := service.RegisterUser(info)
 			if statusRegister {
-				ctx.JSON(http.StatusCreated, gin.H{"message": "success", "data": bson.M{}})
+				ctx.JSON(http.StatusCreated, gin.H{"message": "success to created account ⚡", "data": bson.M{}})
 			} else {
 				ctx.JSON(http.StatusInternalServerError, gin.H{"message": "register failed please try again or contact admin", "data": bson.M{}})
 			}

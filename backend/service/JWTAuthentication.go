@@ -49,7 +49,7 @@ func (service *jwtServices) GenerateToken(userID string, username string, isUser
 		username,
 		jwt.StandardClaims{
 			Audience:  "",
-			ExpiresAt: time.Now().Add(time.Hour * 48).Unix(),
+			ExpiresAt: time.Now().Add(time.Hour * 2).Unix(),
 			Id:        "",
 			IssuedAt:  time.Now().Unix(),
 			Issuer:    service.issure,
